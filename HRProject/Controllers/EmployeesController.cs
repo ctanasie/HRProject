@@ -43,7 +43,7 @@ namespace HRProject.Controllers
         }
 
         // GET: Employees/Create
-        public IActionResultf Create()
+        public IActionResult Create()
         {
 
             return View();
