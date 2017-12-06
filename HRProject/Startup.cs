@@ -28,7 +28,8 @@ namespace HRProject
             services.AddMvc();
 
             // Add ASPNETCoreDemoContext services.
-            services.AddDbContext<companyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("company")));
+            services.AddDbContext<companyContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("company")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -45,7 +45,7 @@ namespace HRProject.Controllers
         // GET: Employees/Create
         public IActionResult Create()
         {
-
+            Employee employee = new Employee();
             return View();
         }
 
@@ -53,8 +53,7 @@ namespace HRProject.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmployeeId,FirstName,LastName,Gender,DateOfBirth,DateOfEmployment,PhoneNumber,Email,Address1,Address2,City,State,Zip")] Employee employee)
+        public async Task<IActionResult> Create(Employee employee)
         {
             if (ModelState.IsValid)
             {
